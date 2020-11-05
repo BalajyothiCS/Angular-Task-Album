@@ -1,0 +1,48 @@
+<div class="d-flex align-items-center justify-content-center vh-100">
+  <div class="row">
+    <div class="col-12" style="width: 40px;">
+      <div class="alert alert-danger align-content-center" role="alert" *ngIf="errorMessage">
+        {{errorMessage}}
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+        <form class="form" #loginForm="ngForm" (ngSubmit)="submit()">
+          <div class="row">
+            <div class="col-12 form-group">
+              <label>Username</label>
+              <input type="text" [(ngModel)]="username" class="form-control" name="username" #usrname="ngModel"
+                required placeholder="Enter UserName">
+              <div *ngIf="usrname.errors && usrname.touched" class="error">
+                <span *ngIf="usrname.errors.required">Username
+                  Required</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" [(ngModel)]="pswd" name="pswd" #password="ngModel"
+                pswdvalidtor required  placeholder="***********">
+              <div *ngIf="password.errors && (password.dirty || password.touched)" class="error">
+                <span *ngIf="password.errors.required">Password
+                  Required</span>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+        </form>
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</div>
