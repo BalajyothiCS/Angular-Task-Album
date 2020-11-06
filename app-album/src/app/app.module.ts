@@ -14,6 +14,13 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HeaderComponent } from './header/header.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { TableVirtualScrollModule } from 'ng-table-virtual-scroll';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +41,13 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatCardModule,
     LayoutModule,
     MatProgressSpinnerModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FlexLayoutModule,
+
+    ScrollingModule,
+    TableVirtualScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

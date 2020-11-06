@@ -19,7 +19,26 @@ th.mat-header-cell {
   min-width: 150px;
 }
 
-.tile-image {
+.mat-form-field {
+  width: 350px;
+}
+
+.cardimage {
+  height: 150px;
+}
+
+.list {
+  min-width: 180px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
   width: 100%;
-  height: auto;
+}
+.view-port {
+  height: 500px;
+}
+.mat-card.main-card {
+  background-color: #f3f5f7;
 }
